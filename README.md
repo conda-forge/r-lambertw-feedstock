@@ -3,6 +3,7 @@ About r-lambertw-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-lambertw-feedstock/blob/main/LICENSE.txt)
 
+
 About r-lambertw
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/gmgeorg/LambertW http://arxiv.org/abs/0912.4554 http://
 Package license: GPL-2.0-or-later
 
 Summary: Lambert W x F distributions are a generalized framework to analyze skewed, heavy-tailed data. It is based on an input/output system, where the output random variable (RV) Y is a non-linearly transformed version of an input RV X ~ F with similar properties as X, but slightly skewed (heavy-tailed). The transformed RV Y has a Lambert W x F distribution. This package contains functions to model and analyze skewed, heavy-tailed data the Lambert Way: simulate random samples, estimate parameters, compute quantiles, and plot/ print results nicely. Probably the most important function is 'Gaussianize', which works similarly to 'scale', but actually makes the data Gaussian. A do-it-yourself toolkit allows users to define their own Lambert W x 'MyFavoriteDistribution' and use it in their analysis right away.
+
 About r-lambertw
 ----------------
 
