@@ -1,4 +1,4 @@
-{% set version = "0.6.7-1" %}
+{% set version = "0.6.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/LambertW_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/LambertW/LambertW_{{ version }}.tar.gz
-  sha256: 64762edfa8cc84a2849626f4ff659972b153ab776e724d57a128ca9dadc0b931
+  sha256: 0a5e50e6200d553fe9d02be99c001e61e8d0be2b4396f311bda8364bc8d79882
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -56,9 +56,9 @@ test:
 about:
   home: https://github.com/gmgeorg/LambertW http://arxiv.org/abs/0912.4554 http://arxiv.org/abs/1010.2265 http://arxiv.org/abs/1602.02200
   license: GPL-2.0-or-later
-  summary: "Lambert W x F distributions are a generalized framework to analyze skewed, heavy-tailed data. It is based on an input/output system, where the output random variable (RV) Y is a non-linearly transformed version of an input RV X ~ F with similar properties as X, but slightly skewed (heavy-tailed). The transformed\
-    \ RV Y has a Lambert W x F distribution. This package contains functions to model and analyze skewed, heavy-tailed data the Lambert Way: simulate random samples, estimate parameters, compute quantiles, and plot/ print results nicely. Probably the most important function is 'Gaussianize', which works similarly to 'scale',\
-    \ but actually makes the data Gaussian. A do-it-yourself toolkit allows users to define their own Lambert W x 'MyFavoriteDistribution' and use it in their analysis right away."
+  summary: "Lambert W x F distributions are a generalized framework to analyze skewed, heavy-tailed data. It is based on an input/output system, where the output random variable (RV) Y is a non-linearly transformed version of an input RV X ~ F with similar properties as X, but slightly skewed (heavy-tailed). The transformed
+    RV Y has a Lambert W x F distribution. This package contains functions to model and analyze skewed, heavy-tailed data the Lambert Way: simulate random samples, estimate parameters, compute quantiles, and plot/ print results nicely. Probably the most important function is 'Gaussianize', which works similarly to 'scale',
+    but actually makes the data Gaussian. A do-it-yourself toolkit allows users to define their own Lambert W x 'MyFavoriteDistribution' and use it in their analysis right away."
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
