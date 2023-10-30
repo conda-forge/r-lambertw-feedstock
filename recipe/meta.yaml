@@ -1,4 +1,4 @@
-{% set version = "0.6.8" %}
+{% set version = "0.6.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/LambertW_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/LambertW/LambertW_{{ version }}.tar.gz
-  sha256: 0a5e50e6200d553fe9d02be99c001e61e8d0be2b4396f311bda8364bc8d79882
+  sha256: 7971c662ee36017f2fed4f6419955f59e7a86a0378bc115ee79bc4c289d2c008
 
 build:
   merge_build_host: true  # [win]
