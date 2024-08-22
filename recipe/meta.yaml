@@ -1,6 +1,5 @@
 {% set version = "0.6.9-1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-lambertw
@@ -13,8 +12,7 @@ source:
   sha256: 52d2b4f506f7cb111026822a645f9897a107819ba5679d8fcbf57beea1dc46a6
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -40,7 +40,6 @@ requirements:
     - r-reshape2
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mass
     - r-rcolorbrewer
     - r-rcpp >=1.0.4
